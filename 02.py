@@ -84,3 +84,21 @@ fmt = '{:15} | {:9.4f} | {:9.4f}'
 for name, cc, pop, (latitude, longitude) in metro_areas:
   if longitude <= 0:
     print(fmt.format(name, latitude, longitude))
+
+
+# namedtuple
+# 튜플은 레코드로 사용하기에 부족한 점이 있다. 때로는 필드에 이름을 붙일 필요가 있다.
+# 필드명이 클래스에 저장되브로 namedtuple()로 생성한 객체는 튜플과 동일한 크기의 메모리만 사용한다.
+# 속성을 객체마다 존재하는 __dict__에 저장하지 않으므로 일반적인 객체보다 메모리를 적게 사용한다.
+
+from collections import namedtuple
+
+City = namedtuple('City', 'name country population coodinates')
+tokyo = City('Tokyo', 'JP', 36.933, (35.689722, 139,691667))
+print(tokyo)
+
+print(tokyo.population)
+
+print(tokyo.coodinates)
+
+print(tokyo[1])
