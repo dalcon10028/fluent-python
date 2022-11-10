@@ -118,3 +118,39 @@ print(delhi._asdict())
 # k v 뿌리기
 for key, value in delhi._asdict().items():
     print(key + ':', value)
+
+# slicing
+
+l = [10, 20, 30, 40, 50, 60]
+
+# stride s[a:b:c] c 보폭(stride)만큼 항목을 건너뛴다.
+
+s = 'bicycle'
+s[::3]
+
+# 다차원 슬라이싱과 생략기호
+# ...는 Ellipsis 객체의 별명으로서 하나의 ellipsis클래스의 객체다.
+#
+
+# 시퀀스 곱셈 연산자 주의
+
+my_list = [[]] * 3
+
+my_list[1].append(1)
+print(my_list)
+
+# 리스트의 리스트 만들기
+
+board = [['_'] * 3 for i in range(3)]
+board[1][2] = 'X'
+print(board)
+
+# [['_'] * 3] * 3 동일한 리스트에 대한 세 개의 참조를 가진 리스트는 쓸모없다.
+
+weired_board = [['_'] * 3] * 3
+print(weired_board)
+
+weired_board[1][2] = '0'
+print(weired_board)
+
+# 시퀀스의 복합할당
