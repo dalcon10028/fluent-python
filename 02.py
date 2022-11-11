@@ -153,4 +153,31 @@ print(weired_board)
 weired_board[1][2] = '0'
 print(weired_board)
 
-# 시퀀스의 복합할당
+fruits = ['grape', 'raspberry', 'apple', 'banana']
+fruits
+['grape', 'raspberry', 'apple', 'banana']
+sorted(fruits)
+['apple', 'banana', 'grape', 'raspberry']
+sorted(fruits, reverse=True)
+['raspberry', 'grape', 'banana', 'apple']
+sorted(fruits, key=len)
+['grape', 'apple', 'banana', 'raspberry']
+fruits
+['grape', 'raspberry', 'apple', 'banana']
+fruits.sort()
+fruits
+['apple', 'banana', 'grape', 'raspberry']
+
+# bisect
+import bisect
+import random
+
+SIZE = 7
+
+random.seed(1729)
+
+my_list = []
+for i in range(SIZE):
+    new_item = random.randrange(SIZE*2)
+    bisect.insort(my_list, new_item)
+    print('%2d ->' % new_item, my_list)
