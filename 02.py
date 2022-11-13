@@ -1,4 +1,4 @@
-from collections import namedtuple
+wfrom collections import namedtuple
 import os
 import array
 symbols = "ÄÄ123213"
